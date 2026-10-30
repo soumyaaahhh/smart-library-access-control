@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% block title %}SmartLibrary | Digital Library{% endblock %}
+{% block content %}
+<section class="hero row align-items-center g-5">
+ <div class="col-lg-7"><div class="eyebrow">YOUR DIGITAL CAMPUS LIBRARY</div><h1>Discover. Learn.<br><span>Grow with knowledge.</span></h1>
+ <p class="lead mt-4">Explore books, academic journals and course materials in one convenient digital library. Find the resources you need for learning, teaching and research.</p>
+ <div class="d-flex gap-3 mt-4"><a class="btn btn-primary btn-lg" href="{{ url_for('login') }}">Explore library <span>→</span></a><a class="btn btn-outline-light btn-lg" href="{{ url_for('register') }}">Create account</a></div>
+ <div class="hero-note mt-4">Books · Course materials · Journals · Research resources</div></div>
+ <div class="col-lg-5"><div class="hero-panel"><div class="panel-top"><span class="live-dot"></span> THE SMART LIBRARY <span class="ms-auto tiny">LEARN ANYTIME</span></div><div class="score-circle"><strong>📚</strong><small>KNOWLEDGE HUB</small></div><div class="decision-row"><span>Books & journals</span><b class="text-success">AVAILABLE</b></div><div class="decision-row"><span>Course materials</span><b>ORGANIZED</b></div><div class="decision-row"><span>Smart access</span><b class="text-success">ENABLED</b></div><div class="allow-pill">✓ YOUR LEARNING SPACE</div></div></div>
+</section>
+<section class="row g-3 mt-5"><div class="col-md-4"><div class="feature-card"><div class="feature-icon">▤</div><h5>Digital catalogue</h5><p>Browse books, journals and learning resources across subjects.</p></div></div><div class="col-md-4"><div class="feature-card"><div class="feature-icon">✎</div><h5>Share learning material</h5><p>Faculty can share course material and students can upload submissions.</p></div></div><div class="col-md-4"><div class="feature-card"><div class="feature-icon">◈</div><h5>Smart access protection</h5><p>Access is protected using permissions and a background risk-checking feature.</p></div></div></section>
+{% endblock %}

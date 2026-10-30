@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block title %}Sign in | SmartLibrary{% endblock %}
+{% block content %}<div class="auth-wrap"><div class="auth-card"><div class="eyebrow">WELCOME BACK</div><h2>Sign in to your library</h2><p class="muted">Your access is evaluated with context-aware security.</p>
+<form method="post"><label>Email address</label><input class="form-control mb-3" type="email" name="email" required placeholder="you@university.edu"><label>Password</label><input class="form-control mb-4" type="password" name="password" required placeholder="••••••••"><button class="btn btn-primary w-100 btn-lg">Sign in</button></form>
+<p class="small muted mt-4 mb-0">New here? <a href="{{ url_for('register') }}">Create an account</a></p>
+<div class="demo-box mt-4"><b>Demo accounts</b><br>Admin: admin@library.demo / Admin123!<br>Student: student@library.demo / Student123!<br>Faculty: faculty@library.demo / Faculty123!<br>Librarian: librarian@library.demo / Lib12345!</div></div></div>{% endblock %}

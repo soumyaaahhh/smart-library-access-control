@@ -4,10 +4,10 @@
   --navy: #090e1a;
   --navy2: #0f172a;
   --blue: #637aff;
-  --cyan: #52c8dc;
-  --ink: #e2e8f0;
-  --muted: #94a3b8;
-  --line: #1e293b;
+  --cyan: #38bdf8;
+  --ink: #f8fafc;        /* Elevated default text brightness */
+  --muted: #cbd5e1;      /* Brightened muted text for higher contrast */
+  --line: #334155;       /* Crisp border lines */
   --bg: #0b0f19;
 }
 
@@ -31,6 +31,7 @@ body {
 .navbar-brand {
   font-family: 'Space Grotesk', sans-serif;
   letter-spacing: -.5px;
+  color: #ffffff;
 }
 
 .brand-mark {
@@ -44,18 +45,18 @@ body {
 }
 
 .nav-link {
-  color: #94a3b8 !important;
+  color: var(--muted) !important;
   font-size: .92rem;
 }
 
 .nav-link:hover {
-  color: white !important;
+  color: #ffffff !important;
 }
 
 .user-chip {
   font-size: .8rem;
-  color: #cbd5e1;
-  background: rgba(255, 255, 255, 0.08);
+  color: #f1f5f9;
+  background: rgba(255, 255, 255, 0.12);
   padding: 8px 12px;
   border-radius: 30px;
 }
@@ -63,17 +64,19 @@ body {
 .btn-primary {
   background: var(--blue);
   border-color: var(--blue);
+  color: #ffffff;
   box-shadow: 0 5px 14px rgba(99, 122, 255, 0.25);
 }
 
 .btn-primary:hover {
   background: #4f64ec;
   border-color: #4f64ec;
+  color: #ffffff;
 }
 
 .btn-outline-primary {
-  color: var(--blue);
-  border-color: #27356b;
+  color: #818cf8;
+  border-color: #4338ca;
 }
 
 .hero {
@@ -98,11 +101,11 @@ body {
 }
 
 .hero h1 span {
-  color: var(--blue);
+  color: #818cf8;
 }
 
 .hero .lead {
-  color: #94a3b8;
+  color: var(--muted);
   max-width: 610px;
   font-size: 1.12rem;
   line-height: 1.7;
@@ -118,7 +121,7 @@ body {
 
 .hero-panel {
   background: linear-gradient(150deg, #111b33, #070d1a);
-  color: white;
+  color: #ffffff;
   padding: 25px;
   border-radius: 24px;
   box-shadow: 0 25px 55px rgba(0, 0, 0, 0.5);
@@ -137,7 +140,7 @@ body {
 
 .tiny {
   font-size: .58rem;
-  color: #64748b;
+  color: #94a3b8;
 }
 
 .live-dot {
@@ -170,17 +173,17 @@ body {
 .score-circle small {
   font-size: .62rem;
   letter-spacing: 1.5px;
-  color: #94a3b8;
+  color: var(--muted);
   margin-top: 6px;
 }
 
 .decision-row {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding: 12px 2px;
   font-size: .85rem;
-  color: #cbd5e1;
+  color: #f1f5f9;
 }
 
 .allow-pill {
@@ -205,7 +208,7 @@ body {
 
 .feature-icon {
   font-size: 1.8rem;
-  color: var(--blue);
+  color: #818cf8;
   margin-bottom: 12px;
 }
 
@@ -222,7 +225,7 @@ body {
 }
 
 .footer {
-  color: #64748b;
+  color: #94a3b8;
   font-size: .8rem;
   border-top: 1px solid var(--line);
   margin-top: 45px;
@@ -251,7 +254,7 @@ body {
   font-size: .82rem;
   font-weight: 600;
   margin-bottom: 7px;
-  color: #cbd5e1;
+  color: #f1f5f9;
 }
 
 .form-control, .form-select {
@@ -274,7 +277,7 @@ body {
   border: 1px dashed #2a3a63;
   border-radius: 12px;
   padding: 13px;
-  color: #94a3b8;
+  color: var(--muted);
   font-size: .78rem;
   line-height: 1.8;
 }
@@ -323,7 +326,7 @@ body {
 }
 
 .section-head a, .book-info a {
-  color: var(--blue);
+  color: #818cf8;
   font-size: .85rem;
   text-decoration: none;
   font-weight: 600;
@@ -348,7 +351,7 @@ body {
   background: linear-gradient(145deg, #1e293b, #0f172a);
   display: grid;
   place-items: center;
-  color: var(--blue);
+  color: #818cf8;
   font: 700 2rem 'Space Grotesk';
 }
 
@@ -371,13 +374,13 @@ body {
 
 .description {
   line-height: 1.5;
-  color: #cbd5e1;
+  color: #f1f5f9;
 }
 
 .tag {
   display: inline-block;
-  background: #172554;
-  color: #93c5fd;
+  background: #1e3a8a;
+  color: #bfdbfe;
   border-radius: 20px;
   padding: 4px 9px;
   font-size: .65rem;
@@ -385,10 +388,11 @@ body {
 }
 
 .tag-danger {
-  background: #450a0a;
-  color: #fca5a5;
+  background: #7f1d1d;
+  color: #fecaca;
 }
 
+/* Fixed Table Styling for Dark Mode Contrast */
 .table-wrap {
   background: var(--navy2);
   border: 1px solid var(--line);
@@ -400,49 +404,54 @@ body {
 .table {
   font-size: .84rem;
   margin: 0;
-  color: #e2e8f0;
+  color: #f8fafc;
+  background-color: transparent !important;
+}
+
+.table th,
+.table td {
+  background-color: transparent !important;
+  color: #f8fafc !important;
+  border-bottom: 1px solid var(--line) !important;
+  padding: 12px 10px;
 }
 
 .table thead th {
-  font-size: .7rem;
+  font-size: .75rem;
   text-transform: uppercase;
   letter-spacing: .8px;
-  color: #64748b;
-  border-bottom-color: var(--line);
+  color: #94a3b8 !important;
   font-weight: 700;
 }
 
-.table td {
-  color: #cbd5e1;
-  border-bottom-color: var(--line);
-}
-
+/* High-Contrast Status Badges */
 .status {
-  padding: 5px 9px;
+  padding: 5px 10px;
   border-radius: 20px;
-  font-size: .68rem;
+  font-size: .72rem;
   font-weight: 700;
   white-space: nowrap;
+  display: inline-block;
 }
 
 .status-allow {
   background: #064e3b;
-  color: #a7f3d0;
+  color: #a7f3d0 !important;
 }
 
 .status-deny {
-  background: #450a0a;
-  color: #fca5a5;
+  background: #7f1d1d;
+  color: #fecaca !important;
 }
 
 .status-challenge_mfa {
-  background: #451a03;
-  color: #fde047;
+  background: #78350f;
+  color: #fef08a !important;
 }
 
 .status-restrict {
-  background: #1e1b4b;
-  color: #a5b4fc;
+  background: #312e81;
+  color: #c7d2fe !important;
 }
 
 .result-wrap {
@@ -477,18 +486,18 @@ body {
 }
 
 .decision-deny {
-  background: #450a0a;
-  color: #fca5a5;
+  background: #7f1d1d;
+  color: #fecaca;
 }
 
 .decision-restrict {
-  background: #1e1b4b;
-  color: #a5b4fc;
+  background: #312e81;
+  color: #c7d2fe;
 }
 
 .decision-challenge_mfa {
-  background: #451a03;
-  color: #fde047;
+  background: #78350f;
+  color: #fef08a;
 }
 
 .result-grid {
@@ -523,7 +532,7 @@ body {
   border-bottom: 1px solid var(--line);
   padding: 10px 0;
   font-size: .85rem;
-  color: #cbd5e1;
+  color: #f1f5f9;
 }
 
 .search-bar {
@@ -566,7 +575,7 @@ body {
   width: 85px;
   height: 85px;
   border-radius: 50%;
-  border: 6px solid #1e293b;
+  border: 6px solid #334155;
   display: grid;
   place-content: center;
   text-align: center;
@@ -583,7 +592,7 @@ body {
 }
 
 .loading {
-  color: var(--blue);
+  color: #818cf8;
   font-weight: 600;
 }
 
